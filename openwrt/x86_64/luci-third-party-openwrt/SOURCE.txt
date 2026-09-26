@@ -8,5 +8,8 @@ pkgs      : luci-theme-argon
             luci-app-autoreboot + luci-i18n-autoreboot-zh-cn
             luci-app-ramfree + luci-i18n-ramfree-zh-cn
             luci-app-filebrowser-go + luci-i18n-filebrowser-go-zh-cn
-            filebrowser-<实际版本>-r1.apk     ← 以 aarch64_cortex-a53/packages/ 里实际文件名为准
-note      : 同上；filebrowser 是 Go 二进制，架构相关，不能复用 x86_64 那份。
+            filebrowser-2.43.0-r1.apk
+note      : 这些包 openwrt 上游没有，走二进制旁路（不参与源码编译）。
+            filebrowser 必须与 luci-app-filebrowser-go 同批打入 /usr/share/third-party/，
+            否则设备上报 "unable to select packages: filebrowser (no such package)"，
+            且 luci-i18n-filebrowser-go-zh-cn 会被连坐一起装不上。
