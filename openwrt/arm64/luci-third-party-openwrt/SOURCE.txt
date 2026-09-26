@@ -1,4 +1,4 @@
-source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/x86_64/luci/
+source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/arm64/luci/
 base  : immortalwrt 25.12.2 / x86_64
 pulled: 2026-09-26
 pkgs  : luci-theme-argon
