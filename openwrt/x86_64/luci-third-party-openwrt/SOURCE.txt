@@ -1,11 +1,12 @@
-source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/x86_64/luci/
-base  : immortalwrt 25.12.2 / x86_64
-pulled: 2026-09-26
-pkgs  : luci-theme-argon
-        luci-app-argon-config + luci-i18n-argon-config-zh-cn
-        luci-app-diskman + luci-i18n-diskman-zh-cn
-        luci-app-autoreboot + luci-i18n-autoreboot-zh-cn
-        luci-app-ramfree + luci-i18n-ramfree-zh-cn
-        luci-app-filebrowser-go + luci-i18n-filebrowser-go-zh-cn
-note  : 这些包 openwrt 上游没有，走二进制旁路（不参与源码编译）。
-        不含 luci-base / luci-compat / luci-lua-runtime —— 那三个由 openwrt 源码编译。
+source    : https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/x86_64/luci/
+dep_source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/x86_64/packages/
+base      : immortalwrt 25.12.2 / x86_64
+pulled    : 2026-09-26
+pkgs      : luci-theme-argon
+            luci-app-argon-config + luci-i18n-argon-config-zh-cn
+            luci-app-diskman + luci-i18n-diskman-zh-cn
+            luci-app-autoreboot + luci-i18n-autoreboot-zh-cn
+            luci-app-ramfree + luci-i18n-ramfree-zh-cn
+            luci-app-filebrowser-go + luci-i18n-filebrowser-go-zh-cn
+            filebrowser-<实际版本>-r1.apk     ← 以 aarch64_cortex-a53/packages/ 里实际文件名为准
+note      : 同上；filebrowser 是 Go 二进制，架构相关，不能复用 x86_64 那份。
