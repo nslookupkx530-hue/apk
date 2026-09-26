@@ -1,5 +1,5 @@
 source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/aarch64_cortex-a53/luci
-base  : immortalwrt 25.12.2 / x86_64
+base  : immortalwrt 25.12.2 / arm64-a53
 pulled: 2026-09-26
 pkgs  : luci-theme-argon
         luci-app-argon-config + luci-i18n-argon-config-zh-cn
