@@ -1,0 +1,5 @@
+source: https://mirror.nju.edu.cn/immortalwrt/releases/25.12.2/packages/x86_64/luci/
+pulled: 2026-09-26
+base  : immortalwrt 25.12.2 / x86_64
+note  : argon 主题 + argon-config/diskman/autoreboot/ramfree/filebrowser-go 及各自 zh-cn i18n
+        这些包 openwrt 上游没有，走二进制旁路，不参与源码编译
